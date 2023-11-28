@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bicicletas">
+    <meta name="description" content="Contato">
     <link rel="stylesheet" href="./style/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <title>Serviços | TechInnovate Solutions</title>
+    <title>Contato | TechInnovate Solutions</title>
 </head>
 
 <body id="contato">
@@ -20,12 +20,11 @@
         <div class="header container">
 
             <a href="./">
-                <img src="./img/logotechin-xtN-S7UzW-transformed.svg" alt="Bikcraft">
+                <img src="./img/logotechin-xtN-S7UzW-transformed.svg" alt="techinnovate">
             </a>
-            <!-- <img src="./logotechin-xtN-S7UzW-transformed.svg" alt="Bikcraft"> -->
             <nav aria-label="primaria">
                 <ul class="header-menu font-1-m cor-0">
-                    <li><a href="./bicicletas.html">Sobre nós</a></li>
+                    <li><a href="./about.html">Sobre nós</a></li>
                     <li><a href="./servicos.html">Serviços</a></li>
                     <li><a href="./novidades.html">Novidades</a></li>
                     <li><a href="./contato.html">Contato</a></li>
@@ -45,7 +44,7 @@
             <section class="contato-dados" aria-label="Endereço">
                 <h2 class="font-1-m cor-0">Loja Online</h2>
                 <div class="contato-endereco font-2-s cor-4">
-                    <p>Rua Ali Perto, 35</p>
+                    <p>Rua Jose das Contas, 32 - Flamengo</p>
                     <p>Rio de janeiro</p>
                     <p>Brasil - Terra - Via Láctea</p>
                 </div>
@@ -62,14 +61,14 @@
                 </div>
             </section>
             <section class="contato-formulario" aria-label="Formulário">
-                <form class="form" action="./contato.html">
+                <form onsubmit="return validarEmail() && validarTelefone() && validarNome()" class="form" action="./contato.html">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" placeholder="Seu nome">
                     </div>
                     <div>
                         <label for="telefone">Telefone</label>
-                        <input type="text" id="telefone" name="telefone" placeholder="(21) 9999-9999">
+                        <input type="text" id="telefone" name="telefone" placeholder="(21) 99999-9999">
                     </div>
                     <div class="col-2">
                         <label for="email">Email</label>
@@ -88,11 +87,11 @@
     </main>
     <footer class="footer-bg">
         <div class="footer container">
-            <img src="./img/logotechin-xtN-S7UzW-transformed.svg" alt="Bikcraft">
+            <img src="./img/logotechin-xtN-S7UzW-transformed.svg" alt="TechInnovate">
             <div class="footer-contato">
                 <h3 class="font-2-l-b cor-0">Fale conosco</h3>
                 <ul class="font-2-m cor-5">
-                    <li><a href="tel:+552199999999">+55 21 9999-9999</a></li>
+                    <li><a href="tel:+5521999999999">+55 21 99999-9999</a></li>
                     <li><a href="mailto:contato@techinnovate.com">contato@techinnovate.com</a></li>
                     <li>Rua Jose das Contas, 32 - Flamengo</li>
                     <li>Rio de janeiro</li>
@@ -110,6 +109,8 @@
             <p class="footer-copy font-1-m cor-6">TechInnovate © Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/validaform.js"></script>
 </body>
 
 </html>
