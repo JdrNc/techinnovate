@@ -43,3 +43,20 @@ function validarEmail() {
 
     return true;
   }
+
+  function exibirMensagem() {
+    alert('Mensagem enviada com sucesso! Agradecemos o seu contato.');
+}
+
+document.getElementById('meuFormulario').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  var telefoneValido = validarTelefone();
+  var emailValido = validarEmail();
+  var nomeValido = validarNome();
+
+  // Se todas as validações passarem, exibe a mensagem
+  if (telefoneValido && emailValido && nomeValido) {
+      exibirMensagem();
+  }
+});
