@@ -63,7 +63,7 @@ document.getElementById('meuFormulario').addEventListener('submit', function (ev
     // Obtém os dados do formulário
     var formData = new FormData(this);
 
-    fetch('../salvar_formulario.php', {
+    fetch('http://localhost/techinnovate/salvar_formulario.php', {
       method: 'POST',
       body: formData
     })
