@@ -10,3 +10,14 @@
 @import "./principal/techinn.css";
 @import "./principal/transforme.css";
 @import "./principal/depoimento.css";
+
+/* Servicos */
+@import "/style/servicos/servicos.css";
+
+/* Contato */
+
+@import "/style/contato/contato.css";
+@import "/style/contato/form.css";
+
+/* Novidades */
+@import "/style/novidades/novidades.css";
