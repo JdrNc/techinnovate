@@ -41,38 +41,38 @@ function validarNome() {
     return false;
   }
 
-  return true;
-}
+    return true;
+  }
 
-function exibirMensagem() {
-  alert('Mensagem enviada com sucesso! Agradecemos o seu contato.');
+  function exibirMensagem() {
+    alert('Mensagem enviada com sucesso! Agradecemos o seu contato.');
 }
 
 document.getElementById('meuFormulario').addEventListener('submit', function (event) {
-event.preventDefault();
+  event.preventDefault();
 
-var telefoneValido = validarTelefone();
-var emailValido = validarEmail();
-var nomeValido = validarNome();
+  var telefoneValido = validarTelefone();
+  var emailValido = validarEmail();
+  var nomeValido = validarNome();
 
-// Se todas as validações passarem, exibe a mensagem e envia os dados ao servidor
-if (telefoneValido && emailValido && nomeValido) {
-  // Exibe a mensagem
-  exibirMensagem();
+  // Se todas as validações passarem, exibe a mensagem e envia os dados ao servidor
+  if (telefoneValido && emailValido && nomeValido) {
+    // Exibe a mensagem
+    exibirMensagem();
 
-  // Obtém os dados do formulário
-  var formData = new FormData(this);
+    // Obtém os dados do formulário
+    var formData = new FormData(this);
 
-  fetch('../salvar_formulario.php', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.text())
-  .then(data => {
-    console.log('Resposta do servidor:', data);
-  })
-  .catch(error => {
-    console.error('Erro na solicitação AJAX:', error);
-  });
-}
+    fetch('http://localhost/techinnovate/salvar_formulario.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log('Resposta do servidor:', data);
+    })
+    .catch(error => {
+      console.error('Erro na solicitação AJAX:', error);
+    });
+  }
 });
