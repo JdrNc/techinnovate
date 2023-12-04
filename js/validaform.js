@@ -55,8 +55,24 @@ document.getElementById('meuFormulario').addEventListener('submit', function (ev
   var emailValido = validarEmail();
   var nomeValido = validarNome();
 
-  // Se todas as validações passarem, exibe a mensagem
+  // Se todas as validações passarem, exibe a mensagem e envia os dados ao servidor
   if (telefoneValido && emailValido && nomeValido) {
-      exibirMensagem();
+    // Exibe a mensagem
+    exibirMensagem();
+
+    // Obtém os dados do formulário
+    var formData = new FormData(this);
+
+    fetch('../salvar_formulario.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log('Resposta do servidor:', data);
+    })
+    .catch(error => {
+      console.error('Erro na solicitação AJAX:', error);
+    });
   }
 });
