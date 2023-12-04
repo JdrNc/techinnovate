@@ -15,7 +15,7 @@
 .botao{
     padding: 16px 32px;
     display: inline-block;
-    background: linear-gradient( #ffbb00,#f2a50c);
+    background: linear-gradient( #0088ff,#0b36e4);
     color: #332200;
     border-radius: 4px;
     box-shadow: 0 1px 2pxrgba(0,0,0,0.1);
@@ -26,5 +26,5 @@
     cursor: pointer;
 }
 .botao:hover{
-    background: linear-gradient( #ffb600,#e59317);
+    background: linear-gradient( #0b36e4,#0088ff);
 }
