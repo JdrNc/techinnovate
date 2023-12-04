@@ -1,9 +1,9 @@
 <?php
 // Conectar ao banco de dados (substitua com suas próprias informações)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "contato_db";
+$servername = "sql111.infinityfree.com";
+$username = "if0_35536988";
+$password = "L8C2cnxXhMiq";
+$dbname = "if0_35536988_formulario_contato";
 
 // Tentar realizar a conexão
 $conn = mysqli_connect($servername, $username, $password, $dbname);
