@@ -1,9 +1,9 @@
 <?php
-// Conectar ao banco de dados (substitua com suas próprias informações)
-$servername = "sql111.infinityfree.com";
-$username = "if0_35536988";
-$password = "L8C2cnxXhMiq";
-$dbname = "if0_35536988_formulario_contato";
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "contato_db";
 
 // Tentar realizar a conexão
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -21,10 +21,9 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $mensagem = $_POST['mensagem'];
 
-// Inserir dados no banco de dados
 $sql = "INSERT INTO formulario_contato (nome, telefone, email, mensagem) VALUES ('$nome', '$telefone', '$email', '$mensagem')";
 
-// Executar a consulta SQL e verificar se foi bem-sucedida
+// Executa a consulta SQL e verifica se foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
     echo "Dados inseridos com sucesso!";
 } else {

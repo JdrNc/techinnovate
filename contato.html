@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contato">
     <link rel="stylesheet" href="./style/style.css">
-
+    <link rel="icon" type="image/x-icon" href="./img/logotechin-xtN-S7UzW-transformed.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +61,7 @@
                 </div>
             </section>
             <section class="contato-formulario" aria-label="Formulário">
-                <form onsubmit="return validarEmail() && validarTelefone() && validarNome()" class="form" action="./contato.html">
+                <form onsubmit="return validarEmail() && validarTelefone() && validarNome()" class="form" action="./salvar_formulario.php" method="post">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" placeholder="Seu nome">
@@ -80,7 +80,7 @@
                         </textarea>
 
                     </div>
-                    <button class="botao col-2">Enviar Mensagem</button>
+                    <button type="submit" class="botao col-2">Enviar Mensagem</button>
                 </form>
             </section>
         </div>
